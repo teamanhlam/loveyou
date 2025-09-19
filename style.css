@@ -1,0 +1,51 @@
+body {
+    background-color: #000;
+    overflow: hidden;
+    margin: 0;
+}
+
+.effect-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.floating-text {
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 5px #00e0ff, 0 0 10px #00e0ff, 0 0 15px #00e0ff, 0 0 20px #00e0ff;
+    animation: floatDown 10s linear forwards;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(0);
+}
+
+.floating-heart {
+    position: absolute;
+    font-size: 20px;
+    color: #ff4757; 
+    animation: floatDown 8s linear forwards;
+    opacity: 0; 
+    transform: translateY(0);
+}
+
+@keyframes floatDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10vh) translateX(50%) rotate(0deg); 
+    }
+    5% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100vh) translateX(-30%) rotate(50deg);
+    }
+}
